@@ -26,9 +26,8 @@ test <- glm(eDNA ~ water_volume_ml * Site_code * Filter_Type,
 anova(test, test = "Chisq")
 
 
+## Stepwise regression model for ALL factors and ALL interactions. PUUUUHHHH, this takes some time
 ### see here: http://www.sthda.com/english/articles/37-model-selection-essentials-in-r/154-stepwise-regression-essentials-in-r/
-
-
 
 full.model <- lm(eDNA ~ (.)^ncol(DATA) - 1, data = DATA)
 
